@@ -278,7 +278,7 @@ def main():
     # Streamlitアプリの設定
     st.set_page_config(
         page_title="English Conversation Bot with Image Support",
-        page_icon=":camera:",
+        page_icon=":speech_balloon:",
         layout="wide"
     )
     st.title("English Conversation Bot with Image Support")
