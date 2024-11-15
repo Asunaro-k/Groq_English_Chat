@@ -25,7 +25,7 @@ def load_caption_model():
         "image-to-text",
         model="Salesforce/blip-image-captioning-base",
         torch_dtype=torch.float16,
-        device=1,
+        device=-1,
         max_new_tokens = 100
     )
     return caption_model
