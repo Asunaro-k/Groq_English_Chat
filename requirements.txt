@@ -8,7 +8,7 @@ langchain_google_vertexai
 Pillow
 aiohttp
 langchain_google_community
-pip install --upgrade --quiet duckduckgo-search
+duckduckgo-search==5.3.1b1
 ipykernel
 torch==2.1.0
 torchvision==0.16.0
