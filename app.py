@@ -311,6 +311,8 @@ def main():
         if st.button("チャット履歴をクリア"):
             st.session_state.chat_history.clear_history()
             st.session_state.messages = []
+            MAX_MEMORY_LIMIT = 0
+            st.session_state.memory.chat_memory.messages = st.session_state.memory.chat_memory.messages[-MAX_MEMORY_LIMIT:]
 
         # 画像アップロード機能を下に配置
         uploaded_file = st.file_uploader("画像をアップロード", type=["png", "jpg", "jpeg"])
