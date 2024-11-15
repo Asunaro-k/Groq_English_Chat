@@ -21,11 +21,13 @@ from transformers import pipeline
 # グローバル変数としてキャプションモデルを初期化
 @st.cache_resource
 def load_caption_model():
+    # 利用可能なデバイスを動的に判定
+    device = 0 if torch.cuda.is_available() else -1
     caption_model = pipeline(
         "image-to-text",
         model="Salesforce/blip-image-captioning-base",
-        torch_dtype=torch.float16,
-        device=-1,
+        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        device=device,
         max_new_tokens = 100
     )
     return caption_model
