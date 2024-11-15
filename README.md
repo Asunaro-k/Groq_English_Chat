@@ -1,7 +1,7 @@
 # Groq_English_Chat
 
-streamlit cloudにて公開中　　
-日常の風景などの画像を送信して英会話をしよう！　　
+streamlit cloudにて公開中<br>
+日常の風景などの画像を送信して英会話をしよう！<br>
 調べごとなど話しかけるだけどもOK
 
 https://asyanaro-groqenglishchat.streamlit.app/
