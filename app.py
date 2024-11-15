@@ -277,7 +277,7 @@ def main():
     image_flag = None
     # Streamlitアプリの設定
     st.set_page_config(
-        page_title="Enhanced Groq LangChain Chat with Image Support",
+        page_title="English Conversation Bot with Image Support",
         page_icon=":camera:",
         layout="wide"
     )
