@@ -300,7 +300,7 @@ def main():
     with st.sidebar:
         st.header("About")
         st.markdown("""
-        遊び方
+        遊び方：
         1.どんなことでも話しかけてみよう
         2.英会話がしたくなったら、画像を送信してね
         
