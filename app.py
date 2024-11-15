@@ -313,6 +313,7 @@ def main():
             st.session_state.messages = []
             MAX_MEMORY_LIMIT = 0
             st.session_state.memory.chat_memory.messages = st.session_state.memory.chat_memory.messages[-MAX_MEMORY_LIMIT:]
+            st.session_state.memory = ConversationBufferMemory()
 
         # 画像アップロード機能を下に配置
         uploaded_file = st.file_uploader("画像をアップロード", type=["png", "jpg", "jpeg"])
