@@ -166,7 +166,7 @@ async def handle_query(prompt, query_chain,question_chain, search, extract_urls,
                 st.info(f"画像の説明: {caption}")
                 
                 prompt_with_image = f"""キーワードに基づいた簡単な英会話をあなたとしたいです。
-                以下に例を張ります。\n
+                以下に例を張ります。例なので猫などの内容は無視してください。\n
                 A: Look at the cat! It's sitting on the floor in front of the kitchen. (見て！猫がキッチンの前の床に座ってるよ。)\n
                 B: Yeah, it looks so relaxed! (ああ、まったりしてるね！)\n
                 A: I know, right? Maybe it's waiting for food. (そうだよね？もしかしたらご飯が食べたいから待ってるのかな。)\n
@@ -174,7 +174,7 @@ async def handle_query(prompt, query_chain,question_chain, search, extract_urls,
                 A: Hmm, maybe. Cats love food! (えー、もしかしたら。猫は食べ物が大好きなんだよ！)\n\n
                 Question: What do you think the cat would say if it could talk? (猫が話すことができたら何と言うかな？)\n
                 
-                上記のように何回か日本語訳をつけた英会話をしたうえで、最後に英語で私に何か質問か問いかけをしてください。キーワード：
+                上記のようにキーワードに基づいて何回か日本語訳をつけた英会話をしたうえで、最後に英語で私に何か質問か問いかけをしてください。キーワード：
                 {caption}
 
                 """
