@@ -300,8 +300,12 @@ def main():
     with st.sidebar:
         st.header("About")
         st.markdown("""
+        遊び方
+        1.どんなことでも話しかけてみよう
+        2.英会話がしたくなったら、画像を送信してね
+        
         このチャットボットは以下の機能を備えています：
-        1. 画像のアップロードと英会話が可能
+        1. 画像の状況の英会話が可能
         2. 最新情報が必要な場合はWeb検索を実行
         3. URLが含まれている場合はそのページの内容を解析
         4. 通常の会話にも対応
@@ -339,7 +343,7 @@ def main():
 
     
 
-    if prompt := st.chat_input("What is your question?"):
+    if prompt := st.chat_input("話しかけてみよう！"):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             if uploaded_file:
