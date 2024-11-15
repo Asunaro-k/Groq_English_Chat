@@ -354,8 +354,7 @@ def main():
                 else:
                     image_flag = None
                     st.image(uploaded_file)
-                    st.info("同じ画像がアップロードされています")
-            #st.markdown("prompt↓")        
+                    st.info("同じ画像がアップロードされています")       
             st.markdown(prompt)
         asyncio.run(handle_query(prompt, query_chain,question_chain, search, extract_urls, get_webpage_content, st.session_state.chat_history,uploaded_file,image_flag))
         image_flag = None
