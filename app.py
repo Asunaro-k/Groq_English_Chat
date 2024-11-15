@@ -97,6 +97,22 @@ NEEDS_QUESTION: [true/false] -問いかけられている場合はtrue
 QUESTION_QUERY: [クエリ] - NEEDS_QUESTIONがtrueの場合のみ最後の英語の問いかけの文章を抜き出して書いてください
 """
 
+def get_prompt(path: str) -> str:
+    path = pathlib.Path(path)
+    if path.exists():
+        with open(path, 'r') as f:
+            return f.read()
+    else:
+        prompts = [
+            'あなたは知識豊富なアシスタントです。会話を良く理解し、適切な返答を行います。'
+            'あなたは英会話をアシストしてください。'
+        ]
+        prompt = '\n'.join(prompts)
+        return prompt
+    
+def get_system_prompt(path: str) -> str:
+    return get_prompt(path)
+
 def init_session_state():
     """セッション状態の初期化"""
     MAX_MEMORY_LIMIT = 10
@@ -113,9 +129,9 @@ def init_session_state():
             temperature=0.7,
         )
     if 'chat_history' not in st.session_state:
-        st.session_state.chat_history = ChatHistory(
-            system_prompt="あなたは親切なAIアシスタントです。"
-        )
+        system_prompt_path = '/prompts/system_prompt.md'
+        system_prompt = get_prompt(system_prompt_path)
+        st.session_state.chat_history = ChatHistory(system_prompt)
     # メッセージ上限のチェックと古いメッセージ削除
     if len(st.session_state.memory.chat_memory.messages) > MAX_MEMORY_LIMIT:
         st.session_state.memory.chat_memory.messages = st.session_state.memory.chat_memory.messages[-MAX_MEMORY_LIMIT:]
