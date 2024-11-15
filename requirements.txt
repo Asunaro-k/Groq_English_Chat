@@ -10,6 +10,6 @@ aiohttp
 langchain_google_community
 duckduckgo-search
 ipykernel
-torch
-torchvision
-torchaudio
+torch==2.1.0
+torchvision==0.16.0
+torchaudio==2.1.0
