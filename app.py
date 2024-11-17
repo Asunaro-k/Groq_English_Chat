@@ -16,12 +16,7 @@ import io
 import torch
 from typing import List
 from transformers import pipeline
-import subprocess
 
-
-def get_pip_list():
-    result = subprocess.run(["pip", "list"], capture_output=True, text=True)
-    return result.stdout
 
 # グローバル変数としてキャプションモデルを初期化
 @st.cache_resource
@@ -329,8 +324,6 @@ def main():
 
         # 画像アップロード機能を下に配置
         uploaded_file = st.file_uploader("画像をアップロード", type=["png", "jpg", "jpeg"])
-        pip_list = get_pip_list()
-        st.code(pip_list, language="bash")
 
     # チャット履歴の表示
     for message in st.session_state.messages:
