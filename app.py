@@ -174,7 +174,7 @@ async def handle_query(prompt, query_chain,question_chain, search, extract_urls,
                 A: Hmm, maybe. Cats love food! (えー、もしかしたら。猫は食べ物が大好きなんだよ！)\n\n
                 Question: What do you think the cat would say if it could talk? (猫が話すことができたら何と言うかな？)\n
                 
-                上記のようにキーワードに基づいて何回か日本語訳をつけた英会話をしたうえで、最後に英語で私に何か質問か問いかけをしてください。キーワード：
+                上記のようにキーワードに基づいて何回か日本語訳をつけた英会話をしたうえで、最後に日本語訳をつけた英語で私に何か質問か問いかけをしてください。キーワード：
                 {caption}
 
                 """
