@@ -203,7 +203,9 @@ async def handle_query(prompt, query_chain,question_chain, search, extract_urls,
                 あなたの目標は、ユーザーが楽しく英会話を練習し、上達できるようにサポートすることです。
                 次の文章の英語の正しさを日本語で評価し、あっている場合は褒めてください。
                 英語ではない場合や間違っている場合は修正を提案してください。
-                またその後も会話を続けて、英語でQuestion: What do you think is the most beautiful rocky cliff with a body of water in the world?のように私に何か質問か問いかけをしてください。\n
+                またその後も会話を続けて、英語で私に何か質問か問いかけをしてください。\n
+                以下に例を張ります。例なので岩の崖などの内容は無視してください。\n
+                Question: What do you think is the most beautiful rocky cliff with a body of water in the world?\n
                 前回の出力で次のような会話を行いました。：{st.session_state.get('questionprompt', '')}\n
                 質問の回答: {prompt}"""
                 
@@ -342,7 +344,7 @@ def main():
                 st.image(uploaded_file)
                 st.session_state['previous_uploaded_file'] = uploaded_file
             asyncio.run(handle_query(None, query_chain,question_chain, search, extract_urls, get_webpage_content, st.session_state.chat_history,uploaded_file,image_flag))
-            #st.info("同じ画像がアップロードされています") 
+            #st.info("同じ画像で英会話を行います") 
 
     
 
