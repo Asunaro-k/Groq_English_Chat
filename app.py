@@ -349,7 +349,7 @@ def main():
 
     
 
-    if prompt := st.chat_input("話しかけてみよう！"):
+    if prompt := st.chat_input("話しかけてみよう！左にメニューがあるよ"):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             if uploaded_file:
