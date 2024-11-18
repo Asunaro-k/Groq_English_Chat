@@ -94,7 +94,7 @@ QUESTION_PROMPT = """
 
 以下の形式で応答してください：
 NEEDS_QUESTION: [true/false] -問いかけられている場合はtrue
-QUESTION_QUERY: [クエリ] - NEEDS_QUESTIONがtrueの場合のみ最後の英語の問いかけの文章を抜き出して書いてください
+QUESTION_QUERY: [クエリ] - 最後の英語の問いかけの文章を抜き出して書いてください
 """
 
 def init_session_state():
