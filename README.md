@@ -6,7 +6,7 @@
 https://asyanaro-groqenglishchat.streamlit.app/
 
 
-#### License
+## License
 
 This project incorporates the BLIP model (Salesforce/blip-image-captioning-base) provided by Salesforce under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. See [https://huggingface.co/Salesforce/blip-image-captioning-base](https://huggingface.co/Salesforce/blip-image-captioning-base) for more details.
 
