@@ -5,6 +5,7 @@
 
 https://asyanaro-groqenglishchat.streamlit.app/
 
+![image](QR_914916.png)
 
 ## License
 
