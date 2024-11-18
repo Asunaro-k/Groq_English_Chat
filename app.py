@@ -290,7 +290,14 @@ def main():
     init_session_state()
 
     # DuckDuckGo検索の初期化
-    search = DuckDuckGoSearchAPIWrapper()
+    search = DuckDuckGoSearchAPIWrapper(
+        backend="api",
+        max_results=5,
+        region="jp-jp",
+        safesearch="off",
+        source="text",
+        time="w"
+    )
 
     # 質問分析のためのチェーン
     query_prompt = PromptTemplate(template=QUERY_PROMPT, input_variables=["question"])
