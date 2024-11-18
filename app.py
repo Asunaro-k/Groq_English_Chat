@@ -202,7 +202,7 @@ async def handle_query(prompt, query_chain,question_chain, search, extract_urls,
                 
                 あなたの目標は、ユーザーが楽しく英会話を練習し、上達できるようにサポートすることです。
                 次の文章の英語の正しさを日本語で評価し、あっている場合は褒めてください。
-                英語ではない場合や間違っている場合は修正を提案してください。
+                英語ではない場合や間違っている場合は修正を提案し、修正した英語を話してください。
                 またその後も会話を続けます。\n
                 以下に例を張ります。例なので岩の崖などの内容は無視してください。\n
                 Question: What do you think is the most beautiful rocky cliff with a body of water in the world?\n
