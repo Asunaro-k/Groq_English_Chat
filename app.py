@@ -109,7 +109,7 @@ def init_session_state():
         st.session_state.memory = ConversationBufferMemory()
     if 'llm' not in st.session_state:
         st.session_state.llm = ChatGroq(
-            model_name="llama-3.2-90b-text-preview",
+            model_name="llama-3.1-70b-versatile",
             temperature=0.7,
         )
     if 'chat_history' not in st.session_state:
