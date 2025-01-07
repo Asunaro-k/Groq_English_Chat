@@ -17,15 +17,6 @@ import torch
 from typing import List
 from transformers import pipeline
 
-st.markdown("""
-<style>
-    [data-testid=stSidebar] {
-        background-color: #ff000050;
-    }
-</style>
-""", unsafe_allow_html=True)
-
-
 # グローバル変数としてキャプションモデルを初期化
 @st.cache_resource
 def load_caption_model():
@@ -292,6 +283,13 @@ def main():
         page_icon=":speech_balloon:",
         layout="wide"
     )
+    st.markdown("""
+        <style>
+            [data-testid=stSidebar] {
+                background-color: #ff000050;
+        }
+    </style>
+    """, unsafe_allow_html=True)
     st.title("English Conversation Bot with Image Support")
 
     # セッション状態の初期化
