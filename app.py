@@ -17,6 +17,14 @@ import torch
 from typing import List
 from transformers import pipeline
 
+st.markdown("""
+<style>
+    [data-testid=stSidebar] {
+        background-color: #ff000050;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 
 # グローバル変数としてキャプションモデルを初期化
 @st.cache_resource
